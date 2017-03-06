@@ -1,0 +1,10 @@
+[Unit]
+Description=Traefik
+
+[Service]
+Type=notify
+ExecStart=/usr/bin/traefik --configFile=/etc/traefik.toml
+WatchdogSec=1s
+
+[Install]
+WantedBy=multi-user.target
